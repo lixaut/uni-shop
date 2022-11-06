@@ -1,37 +1,29 @@
 {
-	"pages": [
-		{
-            "path" : "pages/home/home",
-            "style" : {
-					"enablePullDownRefresh": false
-				}
-            
-        }
-        ,{
-            "path" : "pages/cate/cate",
-            "style" :                                                                                    
-            {
-                "enablePullDownRefresh": false
-            }
-            
-        }
-        ,{
-            "path" : "pages/cart/cart",
-            "style" :                                                                                    
-            {
-                "enablePullDownRefresh": false
-            }
-            
-        }
-        ,{
-            "path" : "pages/my/my",
-            "style" :                                                                                    
-            {
-                "enablePullDownRefresh": false
-            }
-            
-        }
-    ],
+	"pages": [{
+		"path": "pages/home/home",
+		"style": {
+			"enablePullDownRefresh": false
+		}
+
+	}, {
+		"path": "pages/cate/cate",
+		"style": {
+			"enablePullDownRefresh": false
+		}
+
+	}, {
+		"path": "pages/cart/cart",
+		"style": {
+			"enablePullDownRefresh": false
+		}
+
+	}, {
+		"path": "pages/my/my",
+		"style": {
+			"enablePullDownRefresh": false
+		}
+
+	}],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
 		"navigationBarTitleText": "淘多多",
@@ -43,8 +35,7 @@
 	},
 	"tabBar": {
 		"selectedColor": "#FF5C58",
-		"list": [
-			{
+		"list": [{
 				"pagePath": "pages/home/home",
 				"text": "首页",
 				"iconPath": "/static/tab-icons/home.png",
@@ -69,5 +60,21 @@
 				"selectedIconPath": "/static/tab-icons/my-active.png"
 			}
 		]
-	}
+	},
+	"subPackages": [{
+		"root": "subpkg",
+		"pages": [{
+			"path": "goods_detail/goods_detail",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			}
+		}, {
+			"path": "goods_list/goods_list",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			}
+		}]
+	}]
 }
