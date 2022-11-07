@@ -269,6 +269,8 @@
 		flex: 1;
 		font-size: 14px;
 		color: #333;
+		// 光标颜色
+		caret-color: $theme-color;
 	}
 
 	.uni-searchbar__box-icon-clear {

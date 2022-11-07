@@ -1,5 +1,8 @@
 <template>
 	<view>
+		<view class="search-box">
+			<my-search @click="goSearch"></my-search>
+		</view>
 		<!-- 轮播图 -->
 		<swiper 
 			:indicator-dots="true" 
@@ -109,42 +112,52 @@
 						url: '/pages/cate/cate'
 					})
 				}
+			},
+			goSearch() {
+				uni.navigateTo({
+					url: '/subpkg/search/search'
+				})
 			}
 		}
 	}
 </script>
 
 <style lang="scss">
-swiper {
-	height: 330rpx;
-	.swiper-item,
-	image {
-		width: 100%;
-		height: 100%;
+	.search-box {
+		position: sticky;
+		top: 0;
+		z-index: 999;
 	}
-}
-.nav-list {
-	display: flex;
-	justify-content: space-evenly;
-	margin: 15rpx 0;
-	.nav-img {
-		width: 128rpx;
-		height: 140rpx;
+	swiper {
+		height: 330rpx;
+		.swiper-item,
+		image {
+			width: 100%;
+			height: 100%;
+		}
 	}
-}
-
-.floor-title {
-	width: 100%;
-	height: 60rpx;
-}
-.floor-img-box {
-	padding-left: 10rpx;
-	display: flex;
-	.right-img-box {
+	.nav-list {
 		display: flex;
-		flex-wrap: wrap;
 		justify-content: space-evenly;
+		margin: 15rpx 0;
+		.nav-img {
+			width: 128rpx;
+			height: 140rpx;
+		}
 	}
-}
+
+	.floor-title {
+		width: 100%;
+		height: 60rpx;
+	}
+	.floor-img-box {
+		padding-left: 10rpx;
+		display: flex;
+		.right-img-box {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-evenly;
+		}
+	}
 
 </style>
