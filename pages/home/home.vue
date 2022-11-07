@@ -43,7 +43,8 @@
 						<navigator 
 							class="right-img-item" 
 							v-for="(item, index) in item.product_list" 
-							:key="index" :url="item.url"
+							:key="index"
+							:url="item.url"
 						>
 							<image 
 								:src="item.image_src" 
