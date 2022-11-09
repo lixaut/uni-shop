@@ -11,12 +11,17 @@
 				</block>
 			</scroll-view>
 			<scroll-view scroll-y="true" :style="{height: wh + 'px'}" :scroll-top="scrollTop">
-				<view class="cate-level2" v-for="(item2, index) in cateLevel2" :key="index">
+				<view class="cate-level2" v-for="(item2, index) in cateLevel2" :key="item2.cat_pid">
 					<view class="cate-level2-title">
 						- {{item2.cat_name}} -
 					</view>
 					<view class="cate-level2-container">
-						<view class="cate-level3-item" @click="goGoodsList(item3.cat_id)" v-for="(item3, index) in item2.children" :key="index">
+						<view 
+							v-for="item3 in item2.children" 
+							:key="item3.cat_id" 
+							class="cate-level3-item" 
+							@click="goGoodsList(item3.cat_id)"
+						>
 							<!-- 图片地址出问题，临时替换 -->
 							<!-- <image :src="item3.cat_icon" class="pic"></image> -->
 							<image src="../../static/img_filed.png"></image>
@@ -67,6 +72,7 @@
 				this.scrollTop = this.scrollTop === 0 ? 1 : 0
 			},
 			goGoodsList(id) {
+				console.log(id)
 				uni.navigateTo({
 					url: `/subpkg/goods_list/goods_list?cid=${id}`
 				})

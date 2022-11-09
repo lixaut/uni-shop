@@ -49,7 +49,8 @@
 			};
 		},
 		onLoad() {
-			this.historyList = JSON.parse(uni.getStorageSync('kw') || '[]')
+			const kw = uni.getStorageSync('kw')
+			this.historyList = JSON.parse(kw === '' ? '[]' : kw)
 		},
 		methods: {
 			input(e) {
@@ -83,7 +84,7 @@
 			},
 			deleteHistory() {
 				this.historyList = []
-				uni.setStorageSync('kw', [])
+				uni.setStorageSync('kw', '[]')
 			},
 			goGoodsList(kw) {
 				uni.navigateTo({
@@ -138,7 +139,5 @@
 				padding: 5px;
 			}
 		}
-
 	}
-
 </style>
