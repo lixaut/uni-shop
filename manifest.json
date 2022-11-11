@@ -53,11 +53,14 @@
         "appid" : "wx9831480d470acade",
         "setting" : {
             "urlCheck" : false,
-			"checkSiteMap": false,
-			"compileHotReLoad": false
-			
+            "checkSiteMap" : false,
+            "compileHotReLoad" : false
         },
-        "usingComponents" : true
+        "usingComponents" : true,
+        "permission" : {},
+				"requiredPrivateInfos": [
+					"chooseAddress"
+				]
     },
     "vueVersion" : "2"
 }

@@ -2,23 +2,38 @@
 	<view>
 		<my-search @click="goSearch"></my-search>
 		<view class="scroll-view-container">
-			<scroll-view class="left-scroll-view" scroll-y="true" :style="{height: wh + 'px'}">
-				<block v-for="(item, index) in cateList" :key="index">
+			<scroll-view 
+				class="left-scroll-view" 
+				scroll-y="true" 
+				:style="{height: wh + 'px'}"
+			>
+				<block 
+					v-for="(item, index) in cateList" 
+					:key="item.cate_name"
+				>
 					<view 
 						:class="['left-scroll-view-item', index === active ? 'active' : '']"
 						@click="tapActive(index)"
 					>{{item.cat_name}}</view>
 				</block>
 			</scroll-view>
-			<scroll-view scroll-y="true" :style="{height: wh + 'px'}" :scroll-top="scrollTop">
-				<view class="cate-level2" v-for="(item2, index) in cateLevel2" :key="item2.cat_pid">
+			<scroll-view 
+				scroll-y="true" 
+				:style="{height: wh + 'px'}" 
+				:scroll-top="scrollTop"
+			>
+				<view 
+					class="cate-level2" 
+					v-for="(item2, index) in cateLevel2" 
+					:key="item2.cat_name"
+				>
 					<view class="cate-level2-title">
 						- {{item2.cat_name}} -
 					</view>
 					<view class="cate-level2-container">
 						<view 
 							v-for="item3 in item2.children" 
-							:key="item3.cat_id" 
+							:key="item3.cat_name" 
 							class="cate-level3-item" 
 							@click="goGoodsList(item3.cat_id)"
 						>
@@ -35,7 +50,9 @@
 </template>
 
 <script>
+	import badgeMix from '@/mixins/tabbar-badge.js'
 	export default {
+		mixins: [badgeMix],
 		data() {
 			return {
 				// window 高度

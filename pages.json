@@ -4,25 +4,21 @@
 		"style": {
 			"enablePullDownRefresh": false
 		}
-
 	}, {
 		"path": "pages/cate/cate",
 		"style": {
 			"enablePullDownRefresh": false
 		}
-
 	}, {
 		"path": "pages/cart/cart",
 		"style": {
 			"enablePullDownRefresh": false
 		}
-
 	}, {
 		"path": "pages/my/my",
 		"style": {
 			"enablePullDownRefresh": false
 		}
-
 	}],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
@@ -84,7 +80,6 @@
 				"navigationBarTitleText": "",
 				"enablePullDownRefresh": false
 			}
-
 		}]
 	}]
 }
