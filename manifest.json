@@ -52,15 +52,13 @@
         /* 小程序特有相关 */
         "appid" : "wx9831480d470acade",
         "setting" : {
-            "urlCheck" : false,
+            "urlCheck" : true,
             "checkSiteMap" : false,
             "compileHotReLoad" : false
         },
         "usingComponents" : true,
         "permission" : {},
-				"requiredPrivateInfos": [
-					"chooseAddress"
-				]
+        "requiredPrivateInfos" : [ "chooseAddress" ]
     },
     "vueVersion" : "2"
 }
